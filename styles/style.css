@@ -1,0 +1,633 @@
+@charset "utf-8";
+
+@font-face{
+    /*font-family: Snap;*/
+    /*src:url(../fonts/snap.otf),url(../fonts/snap.eot),url(../fonts/snap.ttf),url(../fonts/snap.svg);*/
+    /* src: url('Sansation_Light.ttf'),
+          url('Sansation_Light.eot'); /* IE9 */
+} 
+/*
+@font-face {
+        font-family: "Chalet";
+        font-style: normal;
+        font-weight: normal;
+        src:url(../font/Chalet.eot);
+        src:url(../font/Chalet.eot?#iefix) format("embedded-opentype"),
+                url(../font/chalet.woff) format("woff"),
+                url(../font/Chalet.ttf) format("truetype"),
+                url(../font/chalet.svg#Chalet) format("svg");
+
+}*/
+
+/*https://rolandocaldas.com/html5/slider-css-sin-javascript-automatico*/
+/*https://github.com/rolando-caldas/sliderCSS/blob/master/src/automatic/style.css*/
+/*http://codepen.io/gianmichelle/pen/xpwEh/*/
+
+header, nav, section, article, aside, footer,figure,figcaption {
+    display:block;
+}
+
+/**converter fonts*/
+
+/**
+http://www.freefontconverter.com/
+http://onlinefontconverter.com/
+*/
+*{
+    padding: 0px 0px;
+    margin: 0px 0px;
+    list-style:none;
+}
+footer,header,nav,section{
+    /*background:#1E6381;*/
+    /*border-radius:  .5em;*/ 
+    margin: 0px auto;	
+    /*padding: .05em;*/
+    text-align: center;
+    width: 975px
+}
+h1{
+    display:none;	
+}
+a:link,a:hover,a:visited,a:active  {
+    text-decoration:none;
+    color:rgb(255,255,255);
+}
+body {
+    /*background-color:white;*/
+    background-image:url(../img/fondos/bg.jpg);
+    background-repeat:repeat-x;
+}
+
+
+header{       
+    /*background-color: blue;*/
+    padding-top: 5px;
+}
+#logo{
+    width: 300px;
+    height: 142px;  
+    /*    background-color: yellow; */
+    background-image: url(../img/logos/logo.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#Rtop{
+    width: 630px;
+    height: 144px;
+    background-image: url(../img/logos/topderecha.png);
+    background-repeat: no-repeat;
+    display: inline-block;    
+    vertical-align: bottom;
+}
+/***********************BARRA MENU***************************/
+nav{
+
+}
+nav ul{
+    height:25px;
+    background-color: #058917;
+    text-align: left;
+    /*background-color: green;*/
+}
+nav li{
+    margin:0px 0px;
+    display:inline;
+    /*margin-right: 8px;*/
+    font: 16px "Lucida Grande",Arial,Helvetica,sans-serif;	
+}
+nav li:hover{
+    background-color:#333;    
+}
+nav li a div:hover{
+    height: 23px;
+    background-color: #333;    
+}
+nav a{
+    display:inline-block;
+    min-width: 75px;
+    padding-top: 2px;
+}
+nav li a{
+}
+nav li div{
+    padding-left: 8px;
+    padding-right: 4px;
+    text-align: center;
+}
+/***********************************************************************/
+/***********************************SLIDER***********************************************/
+
+
+input[name="slider-select-element"] {
+    display: none;
+}
+
+#slider-arrows {
+    margin: -10% auto 0 auto;
+    width: 80%;
+}
+
+#slider-box {
+    -moz-animation: autoSlider 15s infinite linear;
+    -o-animation: autoSlider 15s infinite linear;
+    -webkit-animation: autoSlider 15s infinite linear;
+    animation: autoSlider 15s infinite linear;
+
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+
+    height: 100%;
+    width: 300%;
+}
+
+#slider-container {
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: left;
+    width: 640px;
+}
+
+.element-blue,
+.element-green,
+.element-red {
+    min-height: 300px;    
+    width: 100%;
+}
+
+.element-blue {
+    background-image: url(../img/fotos/foto1.png);
+    background-repeat: no-repeat;
+}
+
+.element-green {
+    background-image: url(../img/fotos/foto3.jpg);
+    background-repeat: no-repeat;
+}
+
+.element-red {
+    background-image: url(../img/fotos/foto2.jpg);
+    background-repeat: no-repeat;
+}
+
+.slider-element {
+    float: left;
+    width: 33.333%;
+}
+
+@-moz-keyframes autoSlider {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    95% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+@-webkit-keyframes autoSlider {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    95% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+/*@keyframes autoSlider {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    95% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }*/
+/*******************************FIN SLIDER ***********************************************/
+/**************************CONTENIDO**********************************************/
+#contenido{
+    background-color: #ddd;
+    /*display: block;*/
+    height: 760px;
+}
+#contleft{
+    margin-top: 5px;
+    width: 700px;  
+    display: inline-block;
+
+}
+
+/*#animacion{
+    margin-top: 50px;
+}*/
+/******notiticas****/
+#titulotray{
+    text-align: center;
+    font-size:16px;
+}
+#noticiasprin{
+    font: 12px "Lucida Grande",Arial,Helvetica,sans-serif;
+    font-size:13px;
+
+}
+#subnoti{
+    border-width:2px;	
+    border-style:outset;
+    margin: 4px 4px;
+}
+#mensajenoti{
+    text-align: justify;
+    padding: 4px 4px;
+}
+#fechanoti{
+    text-align: right;
+    font-style: oblique;
+    font: 10px "Lucida Grande",Arial,Helvetica,sans-serif;
+    padding-right: 5px;
+}
+
+
+/**********fin noticias******/
+#lefttop{
+    background-color: white;
+    width: 100%;
+    min-height: 650px;
+    padding-top: 10px;
+
+    border:solid;
+    border-color: #006633 #006633 #006633 #006633;
+    border-width: 2px 4px 4px 2px;
+}
+#leftdown{
+    background-color: #EAEAEA;
+    width: 100%;
+
+}
+/******************/
+aside{
+    padding-top: 5px;
+    vertical-align: top;
+    margin-left: 15px;
+    /*background-color: brown;*/
+    display: inline-block;
+    width: 24%;
+}
+aside ul li {
+    margin: 4px 0;
+    border:solid;
+    border-color: green green;
+    border-width: 4px 6px 6px 4px;
+    border-radius:.5em;
+
+}
+aside ul li {
+    cursor:pointer;    
+
+}
+aside ul li:hover{
+
+
+}
+aside ul li a:hover{
+    color: black;
+}
+#icontrip{
+    height:80px;
+    width: 80px;
+    background-image: url(../img/icons/btntriptico.jpg);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+#btnInfo{
+    background-image: url(../img/icons/btninfoperegrino.png);
+    background-repeat: no-repeat;
+    height: 70px;
+}
+#btnTrip{
+    background-color: white;
+}
+#btnAfic{
+    background-image: url(../img/fotos/afiche.jpg);
+    width: 222px;
+    min-height: 300px;
+    background-repeat: no-repeat;
+    margin:2px 3px;;
+}
+/******textos******/
+#marcotexto{
+    margin: 10px 10px;
+}
+#texto{
+    line-height:1.5em;
+}
+p{
+    text-align:justify;
+    font-family:"Arial Narrow", Arial, "Arial Black";
+    font-size:13px;
+}
+div h4{
+    text-align: left;
+    margin: 10px auto;
+}
+#tituloprincipal{
+    text-align:center;
+
+    font-size:14px;
+    margin: 10px auto;
+}
+/****************/
+#texticontrip{
+    width: 140px;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+}
+#datoscparticipar{
+    margin-left: 65px;
+}
+#tablacp tr td{
+    text-align: left;
+}
+#tablacp tr td input{
+    width: 220px;
+
+}
+#enviardata{
+    margin-left: 100px;
+}
+/************foto de caminantes*****/
+#fnoti{
+    height: 390px;
+    width: 620px;
+    /*    background-color: blueviolet;*/
+    background-image: url(../img/fotos/foto1.png);
+    background-repeat: no-repeat;
+    padding-top: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/******directiva***/
+#tabladir{
+    width: 700px;
+    font: 12px "Lucida Grande",Arial,Helvetica,sans-serif;
+    border: none;
+}
+#tabladir tr {
+    height: 32px;
+}
+#tcargo, #tnombre, #ttelf{    
+    font-weight: bold;
+}
+#tcargo {    
+    width: 300px;
+}
+#tnombre {
+    width: 240px;    
+}
+.tleft{
+    text-align: left;
+
+}
+#fotodirec{
+    height: 300px;
+    width: 640px;
+    margin: 10px auto;
+    background-image: url(../img/fotos/directiva.jpg);
+    background-repeat: no-repeat;
+    border-width:2px;	
+    border-style:outset;
+}
+#tcolab{
+    width: 700px;
+    font: 12px "Lucida Grande",Arial,Helvetica,sans-serif;
+    text-align: left;
+}
+#tcolab tr {
+    height: 16px;
+
+}
+#titulocolabora{
+    margin: 0 auto;
+    font-weight: bold;
+}
+#textcon{
+    line-height:1.5em;
+}
+#marcotexto ul{
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 30px;
+}
+#marcotexto ul li{
+    list-style-type: square;
+}
+
+#marcotexto h3{
+    list-style-type: square;
+    text-align: left;
+    line-height:1.5em;
+}
+#marcotexto p{
+    font: 14px "Lucida Grande",Arial,Helvetica,sans-serif;
+}
+.tituloConten{
+    font: 16px "Lucida Grande",Arial,Helvetica,sans-serif;
+    font-weight: bold;
+}
+.scrollbar{
+    width:680px;
+    height:600px;
+
+    margin-top:10px;
+    margin-left:10px;
+    overflow-y:scroll;
+    float:left;
+}
+.content{
+    height:450px;
+} 
+/********************************/
+
+/*************social buttons*****************/
+.social {
+    position: fixed;
+    top: 300px;
+    left: 60px;
+}
+.social ul {
+    padding: 0px;
+    -webkit-transform: translate(-270px, 0);
+    -moz-transform: translate(-270px, 0);
+    -ms-transform: translate(-270px, 0);
+    -o-transform: translate(-270px, 0);
+    transform: translate(-270px, 0);
+}
+.social ul li {
+    display: block;
+    margin: 5px;
+    background: rgba(0, 0, 0, 0.36);
+    width: 300px;
+    text-align: right;
+    padding: 10px;
+    -webkit-border-radius: 0 30px 30px 0;
+    -moz-border-radius: 0 30px 30px 0;
+    border-radius: 0 30px 30px 0;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.social ul li:hover {
+    -webkit-transform: translate(50px, 0);
+    -moz-transform: translate(50px, 0);
+    -ms-transform: translate(50px, 0);
+    -o-transform: translate(50px, 0);
+    transform: translate(50px, 0);
+    background: rgba(255, 255, 255, 0.4);
+}
+.social ul li:hover a {
+    color: #000;
+}
+.social ul li:hover i {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.36);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.social ul li i {
+    margin-left: 10px;
+    color: #000;
+    background: #fff;
+    padding: 10px 15px;
+    
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    background: #ffffff;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+#tw{
+    background-image: url(../img/icons/b_twitwer.png);
+    background-repeat: no-repeat;
+    
+}
+#fa{
+    background-image: url(../img/icons/b_facebook.png);
+    background-repeat: no-repeat;
+}
+#go{
+    background-image: url(../img/icons/b_google.png);
+    background-repeat: no-repeat;
+}
+/****************************************/
+
+/**
+
+https://developer.mozilla.org/en-US/docs/HTML/HTML5/HTML5_element_list
+http://csswizardry.com/2011/01/create-a-centred-horizontal-navigation/
+http://www.ehow.com/info_12229897_overflow-hidden-not-working-html5-css.html
+http://stackoverflow.com/questions/2570972/css-font-border
+http://reeddesign.co.uk/test/points-pixels.html
+http://border-radius.com/
+
+http://wowslider.com/jquery-slideshow-flat-slices.html
+/*http://www.cvwdesign.com/txp/article/455/transparent-borders-with-css3
+
+
+
+http://www.w3schools.com/Css/css_boxmodel.asp
+
+http://lineadecodigo.com/css/bordes-3d-con-css/
+
+http://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators
+
+http://es.html.net/tutorials/css/lesson15.php
+*/
+
+
