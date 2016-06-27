@@ -1,6 +1,6 @@
-<?php 
-require_once '../noticia.class.php';
-require_once '../dbconection.php';
+<?php
+require_once 'noticia.class.php';
+require_once 'dbconection.php';
 $db = database::getInstance();
 $noticias = $db->LoadNoticias();
 
@@ -19,12 +19,12 @@ $noticias = $db->LoadNoticias();
 
 <html lang="en" >
     <head>
-      
-        
+
+
         <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
         Remove this if you use the .htaccess -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"  />
-
+        <meta charset="utf-8" />
         <title>Peregrinos al Santo Cristo de la Grita</title>
         <meta name="description" content="Peregrinos del Santo Cristo de la Grita" />
         <meta name="author" content="A.C. DE PEREGRINOS A EL SANTO CRISTO DE LA GRITA" />
@@ -94,7 +94,7 @@ $noticias = $db->LoadNoticias();
             function pdfview() {
                 window.open('pdf/triptico.pdf', '_blank', 'fullscreen=yes');
             }
-            function galeria(){
+            function galeria() {
                 window.open('galeria.html', '_blank', 'fullscreen=yes');
             }
 //            function enviardata() {
